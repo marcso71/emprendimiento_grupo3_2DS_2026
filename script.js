@@ -4,12 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     enlacesNav.forEach(enlace => {
         enlace.addEventListener("click", (e) => {
-            e.preventDefault();
+            // ELIMINADO e.preventDefault() para que los enlaces HTML sí cambien de página
+
             const pestañaDestino = enlace.textContent.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-            secciones.forEach(seccion => {
-                seccion.style.display = "none";
-            });
+            // Oculta secciones solo si existen en la página actual
+            if (secciones.length > 0) {
+                secciones.forEach(seccion => {
+                    seccion.style.display = "none";
+                });
+            }
 
             enlacesNav.forEach(link => {
                 link.classList.remove("activo");
@@ -24,13 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Código para el botón principal (si existe en la página)
     const btnHero = document.querySelector(".btn-principal");
     if (btnHero) {
         btnHero.addEventListener("click", () => {
             const enlaceMenu = Array.from(enlacesNav).find(link => 
                 link.textContent.trim().toLowerCase().includes("men")
             );
-            if (enlaceMenu) {
+            if (enlaceMenu) {S
                 enlaceMenu.click();
             }
         });
