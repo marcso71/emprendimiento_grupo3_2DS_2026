@@ -1,96 +1,141 @@
-/*CONFIGURACION DEL ENCABEZADO*/
-
-/* Establece una imagen de fondo para el encabezado */
-#mi-encabezado {
-      background-image: url('Imagen'); /* Reemplaza 'ruta-de-tu-imagen.jpg'
-con la ubicación de tu imagen */
-background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-background-position: center; /* Centra la imagen en el encabezado */
-height: 15rem; /* Altura del encabezado (ajusta según tus necesidades) */
-color: #ffffff; /* Color del texto en el encabezado para asegurar la legibilidad */
-text-orientation: upright;
-text-align: center; /* Alinea el contenido al centro del encabezado */
-padding: 100px; /* Espacio de relleno interno para el contenido */
-
-}
-
-/* Estilos adicionales para el Título en el encabezado */
-#mi-encabezado h1 {
-font-size: 45px; /* Tamaño de fuente del título */
-font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Estilos adicionales para el texto en el encabezado */
-#mi-encabezado p {
-font-size: 25px; /* Tamaño de fuente del texto del encabezado */
-}
-
-/*CONFIGURACION DEL MENU*/
-
-/* Establece el fondo transparente para el menú */
-nav {
-background-color: rgb(255, 255, 255);
-padding: 15px 20px;
-position: fixed; /* Posiciona el menú en la parte superior de la página */
-top: 0;
-left: 0;
-width: 100%;
-transition: background-color 0.5s; /* Transición suave para el cambio de color de
-fondo */
-
-}
-
-/* Estilos para los elementos menu*/
-ul {
-list-style-type: none;
-text-align: right;
-margin-right: 3rem;
-}
-
-/*elementos de la lista del menu*/
-li {
-display: inline;
-margin-right: 30px; /* Espacio entre elementos del menú */
-}
-
-a {
-text-decoration: none;
-color: #000000; /* Color del texto del menú */
-font-weight: bold;
-}
-
-/* Cambia el color del enlace cuando se pasa el mouse por encima */
-a:hover {
-color: #000000; /* Cambia el color al pasar el mouse por encima */
-}
-
-/*CONFIGURACION DEL BODY*/
+/* ==========================================
+   CONFIGURACION DEL BODY Y FONDO GENERAL
+   ========================================== */
 body {
-/*configura los margenes de la página*/
-margin-top: 60px; /* Ajusta según la altura del menú */
-margin-left: 0px;
-margin-right: 0px;
-font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-top: 70px; /* Evita que el menú fijo tape el inicio de la página */
+    /* Un tono café claro/crema muy agradable para el fondo general */
+    background-color: #f4ecd8; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3e2723; /* Texto color café oscuro para que contraste bien */
 }
 
-/*CONFIGURACION DEL CONTENIDO*/
+/* ==========================================
+   CONFIGURACION DEL MENU (FIJO ARRIBA)
+   ========================================== */
+nav {
+    /* Café oscuro elegante para la barra de navegación */
+    background-color: #3e2723; 
+    padding: 15px 20px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+ul {
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+    padding-right: 2rem;
+}
+
+li {
+    display: inline;
+    margin-right: 30px; 
+}
+
+/* Enlaces del menú en color crema/blanco */
+nav a {
+    text-decoration: none;
+    color: #f4ecd8; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Al pasar el mouse, cambia a un tono naranja hamburguesa */
+nav a:hover {
+    color: #ffb300; 
+}
+
+/* ==========================================
+   CONFIGURACION DEL ENCABEZADO
+   ========================================== */
+#mi-encabezado {
+    /* Capa oscura transparente + Imagen de fondo */
+    background-image: linear-gradient(rgba(62, 39, 35, 0.6), rgba(62, 39, 35, 0.6)), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1000'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 20rem; 
+    color: #ffffff; 
+    /* Flexbox para centrar perfectamente el texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+#mi-encabezado h1 {
+    font-size: 50px; 
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para resaltar el nombre */
+}
+
+#mi-encabezado p {
+    font-size: 22px; 
+    margin-top: 10px;
+    color: #ffb300; /* Subtítulo en tono dorado */
+    font-weight: bold;
+}
+
+/* ==========================================
+   CONFIGURACION DEL CONTENIDO
+   ========================================== */
 .contenido {
-/* configura el color, tamaño de fuente y alineación del texto en el cuerpo de la
-página */
-color: #000000;
-font-size: 20px;
-padding: 5%;
-text-align:justify;
-
-font-family: Arial, Helvetica, sans-serif;
+    max-width: 850px; /* Limita el ancho para que se vea ordenado */
+    margin: 30px auto; /* Centra el bloque en la pantalla */
+    background-color: #ffffff; /* Fondo blanco para las tarjetas de texto */
+    padding: 40px;
+    border-radius: 8px; /* Bordes suavemente redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    text-align: justify;
+    line-height: 1.6;
 }
 
+.contenido h2 {
+    color: #3e2723;
+    margin-top: 25px;
+}
+
+.contenido hr {
+    border: 0;
+    height: 2px;
+    background-color: #ffb300; /* Líneas separadoras doradas */
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para tu Galería de fotos */
+.contenedor-galeria {
+    margin-top: 40px;
+}
+
+.Galeria {
+    background-color: #fff8e1; /* Fondo crema suave para cada foto */
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 5px solid #ffb300; /* Detalle dorado al lateral */
+    border-radius: 4px;
+}
+
+.tarjeta-foto img {
+    border-radius: 6px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ==========================================
+   CONFIGURACION DEL PIE DE PÁGINA (FOOTER)
+   ========================================== */
 .footer {
-background-color: #ffffff; /* Cambia el color de fondo a azul */
-padding: 10rem;
-color: #000000;
-color: #000000; /* Color del texto en el encabezado para asegurar la legibilidad */
-text-align: center; /* Alinea el contenido al centro del encabezado */
-/* Espacio de relleno interno para el contenido */
+    background-color: #3e2723; /* Café oscuro igual al menú */
+    padding: 25px; /* Relleno normalizado (ya no es gigante) */
+    color: #f4ecd8; 
+    text-align: center; 
+    font-size: 15px;
+    margin-top: 50px;
+}
 
 }

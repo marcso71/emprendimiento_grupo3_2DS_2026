@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receta de Hamburguesas Especiales</title>
+    <title>Cangreburger - Contacto</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,39 +12,63 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Ingredientes</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="ingredientes.html">Ingredientes</a></li>
+                <li><a href="contac.html">Contacto</a></li>
             </ul>
         </nav>
         <h1>CANGREBURGER</h1>
-        <p>Modulo 2.2</p>
+        <p>Módulo 2.2</p>
     </header>
 
     <main>
         <article class="contenido">
-            <h2>Receta: Hamburguesa</h2>
+            <h2>Ponte en Contacto</h2>
             <hr>
 
-            <section class="ingredientes">
-                <h3>Ingredientes necesarios:</h3>
-                <ol>
-                    <li>Pan para hamburguesa con ajonjolí</li>
-                    <li>Pepinos frescos cortados en rodajas</li>
-                    <li>1 paquete de 6 unidades de carne (Lion Bram)</li>
-                    <li>Queso crack (fundido o en láminas)</li>
-                    <li>Aderezos al gusto (mayonesa, mostaza y salsa de tomate)</li>
-                </ol>
+            <section class="informacion-contacto">
+                <h3>Nuestros Medios</h3>
+                <p><b>Correo Electrónico:</b> contacto@cangreburger.com</p>
+                <p><b>Teléfono / WhatsApp:</b> +123 456 7890</p>
+                <p><b>Horario de atención:</b> Lunes a Sábado de 11:00 AM a 9:00 PM</p>
             </section>
+
+            <hr>
+
+            <section class="formulario-contacto">
+                <h3>Envíanos un mensaje directo</h3>
+                <form action="#" method="POST">
+                    <p>
+                        <label for="nombre"><b>Nombre completo:</b></label><br>
+                        <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;">
+                    </p>
+                    
+                    <p>
+                        <label for="correo"><b>Correo electrónico:</b></label><br>
+                        <input type="email" id="correo" name="correo" required style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;">
+                    </p>
+
+                    <p>
+                        <label for="mensaje"><b>Tu mensaje o pedido:</b></label><br>
+                        <textarea id="mensaje" name="mensaje" rows="5" required style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; resize: vertical;"></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit" style="background-color: #3e2723; color: #f4ecd8; padding: 10px 20px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Enviar Mensaje</button>
+                    </p>
+                </form>
+            </section>
+
+            <hr>
 
             <section class="creditos">
                 <h3>Créditos</h3>
-                <p>Receta compartida por el equipo de cocina de la página. Fotografía y desarrollo del contenido creado de manera independiente.</p>
+                <p>Página de contacto diseñada y estructurada por Judith, Andrea y Benjamin como parte del proyecto de Emprendimiento Módulo 2.2.</p>
             </section>
         </article>
     </main>
 
     <footer class="footer">
-        <p>Derechos reservados © 2026</p>
+        <p>Derechos reservados a Judith, Andrea y Benjamin © 2026</p>
     </footer>
 
     <script src="script.js"></script>
