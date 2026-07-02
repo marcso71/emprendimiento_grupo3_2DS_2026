@@ -1,141 +1,46 @@
-/* ==========================================
-   CONFIGURACION DEL BODY Y FONDO GENERAL
-   ========================================== */
 body {
     margin: 0;
-    padding-top: 70px; /* Evita que el menú fijo tape el inicio de la página */
-    /* Un tono café claro/crema muy agradable para el fondo general */
+    padding-top: 70px;
     background-color: #f4ecd8; 
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3e2723; /* Texto color café oscuro para que contraste bien */
+    font-family: Arial, sans-serif;
+    color: #3e2723;
 }
 
-/* ==========================================
-   CONFIGURACION DEL MENU (FIJO ARRIBA)
-   ========================================== */
 nav {
-    /* Café oscuro elegante para la barra de navegación */
     background-color: #3e2723; 
     padding: 15px 20px;
     position: fixed; 
     top: 0;
-    left: 0;
     width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
 }
 
-ul {
-    list-style-type: none;
-    text-align: right;
-    margin: 0;
-    padding-right: 2rem;
-}
+ul { list-style-type: none; text-align: right; margin: 0; }
+li { display: inline; margin-right: 30px; }
+nav a { text-decoration: none; color: #f4ecd8; font-weight: bold; }
+nav a:hover { color: #ffb300; }
 
-li {
-    display: inline;
-    margin-right: 30px; 
-}
-
-/* Enlaces del menú en color crema/blanco */
-nav a {
-    text-decoration: none;
-    color: #f4ecd8; 
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-/* Al pasar el mouse, cambia a un tono naranja hamburguesa */
-nav a:hover {
-    color: #ffb300; 
-}
-
-/* ==========================================
-   CONFIGURACION DEL ENCABEZADO
-   ========================================== */
 #mi-encabezado {
-    /* Capa oscura transparente + Imagen de fondo */
-    background-image: linear-gradient(rgba(62, 39, 35, 0.6), rgba(62, 39, 35, 0.6)), url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1000'); 
-    background-size: cover; 
-    background-position: center; 
-    height: 20rem; 
-    color: #ffffff; 
-    /* Flexbox para centrar perfectamente el texto */
+    background: #3e2723;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
-    text-align: center; 
+    color: #ffffff;
 }
 
-#mi-encabezado h1 {
-    font-size: 50px; 
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para resaltar el nombre */
-}
-
-#mi-encabezado p {
-    font-size: 22px; 
-    margin-top: 10px;
-    color: #ffb300; /* Subtítulo en tono dorado */
-    font-weight: bold;
-}
-
-/* ==========================================
-   CONFIGURACION DEL CONTENIDO
-   ========================================== */
 .contenido {
-    max-width: 850px; /* Limita el ancho para que se vea ordenado */
-    margin: 30px auto; /* Centra el bloque en la pantalla */
-    background-color: #ffffff; /* Fondo blanco para las tarjetas de texto */
+    max-width: 850px;
+    margin: 30px auto;
+    background-color: #ffffff;
     padding: 40px;
-    border-radius: 8px; /* Bordes suavemente redondeados */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave */
-    text-align: justify;
-    line-height: 1.6;
+    border-radius: 8px;
 }
 
-.contenido h2 {
-    color: #3e2723;
-    margin-top: 25px;
-}
-
-.contenido hr {
-    border: 0;
-    height: 2px;
-    background-color: #ffb300; /* Líneas separadoras doradas */
-    margin-bottom: 20px;
-}
-
-/* Estilos específicos para tu Galería de fotos */
-.contenedor-galeria {
-    margin-top: 40px;
-}
-
-.Galeria {
-    background-color: #fff8e1; /* Fondo crema suave para cada foto */
-    margin-bottom: 25px;
-    padding: 15px;
-    border-left: 5px solid #ffb300; /* Detalle dorado al lateral */
-    border-radius: 4px;
-}
-
-.tarjeta-foto img {
-    border-radius: 6px;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
-}
-
-/* ==========================================
-   CONFIGURACION DEL PIE DE PÁGINA (FOOTER)
-   ========================================== */
 .footer {
-    background-color: #3e2723; /* Café oscuro igual al menú */
-    padding: 25px; /* Relleno normalizado (ya no es gigante) */
-    color: #f4ecd8; 
-    text-align: center; 
-    font-size: 15px;
-    margin-top: 50px;
-}
-
+    background-color: #3e2723;
+    padding: 20px;
+    color: #f4ecd8;
+    text-align: center;
 }
